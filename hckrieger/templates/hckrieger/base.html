@@ -1,0 +1,140 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      
+    <link rel="stylesheet" type="text/css" href="{% static 'hckrieger/stylesheet.css' %}">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+      
+    <header>
+        <h1>hckrieger.com</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Content</a></li> 
+            </ul>
+        </nav>
+    </header>
+    <div id="dropdown">
+         <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Content</a></li> 
+        </ul>       
+    </div>
+      
+    <div id="jumbotron">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzlNf7GE0xEYWg-kcizp0tBdfwG200GnyRFNzAKRI7xfQSIYl-uw&s">
+        <h2>Hunter Krieger</h2>
+        <h3>Blogger, Reader, Gamer, Musician, Programmer</h3>
+    </div>
+      
+    
+      <section id="about">
+        <h2>Hunter Krieger has....</h2>
+        <ul style="text-align: center; font-size: 23px; line-height: 2em;">
+            <li>...utilized web technologies to build professional looking websites</li>
+            <li>...written many blog posts about psychology, economics, technology, culture etc.</li>
+            <li>...produced dozens of musical recordings with a laptop, MIDI keyboard and FL Studio</li>
+        </ul>
+        <h3>More About Hunter</h3>
+      </section>
+
+      <section id="blog">
+        <h2>Blog</h2>
+        <div id="recent-post">
+            <article>
+               <h2>The Moral Foundations Behind Our Socio-political Convictions</h2>
+               <h3>published dd-mm-yy</h3>
+               <h4>Written by Hunter Krieger</h4>
+              <img src="{% static 'hckrieger/blue.jpg' %}">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>   
+                
+              <p>si architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consec dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolordicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolor</p>
+            </article>
+        </div>
+          
+        <div id="four-posts">
+          <article>
+            <h2>Alice in Chains 3rd album Chains 3 album Chains 3rd Chains 3rd</h2> 
+            <h3>published dd-mm-yy</h3>
+            <h4>Written by Hunter Krieger</h4>
+            <img src="{% static 'hckrieger/blue.jpg' %}">
+
+          </article>
+            
+          <article>
+            <h2>How do I place a div on album Chains 3 album Chains 3 album Chains 3 the bottom left of another div</h2>  
+            <h3>published dd-mm-yy</h3 album Chains 3 album Chains 3 album Chains 3>
+            <h4>Written by Hunter Krieger</h4>
+            <img src="{% static 'hckrieger/blue.jpg' %}">
+          </article>
+            
+          <article>
+            <h2>Having Empathy Doesn't make you a good person and can make you irrational</h2>  
+            <h3>published dd-mm-yy</h3>
+            <h4>Written by Hunter Krieger</h4>
+            <img src="{% static 'hckrieger/blue.jpg' %}">
+          </article>
+            
+            
+          <article>
+            <h2>Alice in Chains 3rd alb album Chains 3 album Chains 3um</h2>  
+            <h3>published dd-mm-yy</h3>
+            <h4>Written by Hunter Krieger</h4>
+            <img src="{% static 'hckrieger/blue.jpg' %}"> 
+          </article>
+        </div>
+        <div id="more-posts">
+            <h2>More Posts</h2>  
+        </div>
+      </section>
+
+      <section id="projects">
+
+        <h2>Projects</h2>
+        <div class="project-list">
+             <a href="http://www.winamacpowershow.com" class="winamac project">
+              <h4>winacpowershow.com</h4>
+              <img src="{% static 'hckrieger/winamac.png' %}">
+            </a>
+
+            <a href="http://www.brineyconstructionservices.com" class="briney project">
+              <h4>brineyconstructionservices.com</h4>
+              <img src="{% static 'hckrieger/briney.png' %}">
+            </a>  
+
+        </div>
+
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+      </section>
+    
+    
+    <footer>
+      <h2>hckrieger.com</h2>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapccom/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
