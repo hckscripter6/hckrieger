@@ -1,0 +1,12 @@
+{% extends 'blog/base.html'%}
+
+{% block title %}
+{{ post.title }} - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+    <article>
+        <h2><a href="{% url 'single_post' post.id %}">{{ post.title }}</a></h2>
+        {{ post.body | safe }}
+    </article>
+{% endblock content %}

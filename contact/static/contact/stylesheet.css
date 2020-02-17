@@ -1,0 +1,7 @@
+section#contact {
+    background-color: tan;
+    border: 1px solid black;
+    border-radius: 2.5px;
+    display: block;
+    margin: 1em .5em 1em .5em;
+}

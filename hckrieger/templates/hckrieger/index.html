@@ -1,0 +1,82 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  {% include "head.html" %}
+  <body>
+  {% include "navigation.html" %}
+      
+      
+    <div id="jumbotron">
+        <img style="border: 2px solid black;" src="{% static 'hckrieger/headshot2.jpg' %}">
+        <h2>Hunter Krieger</h2>
+        <h3>Blogger, Reader, Gamer, Musician, Programmer</h3>
+     </div>
+      <section id="about">
+        <h2>Hunter Krieger has....</h2>
+        <ul>
+            <li>...utilized web technologies to build professional looking websites</li>
+            <li>...written many blog posts about psychology, economics, technology, culture etc.</li>
+            <li>...managed to survive in his mortal form on the planet earth for 26 years and counting</li>
+        </ul>
+        <h3>More About Hunter</h3>
+      </section>
+
+      <section id="blog">
+        <h2>Blog</h2>
+        <div id="recent-post">
+            <article>
+               <h2>{{ post1.title }}</h2>
+               <h3>{{ post1.date_published }}</h3>
+               <h4>Written by {{ post1.author }}</h4>
+              <img src="{{ post1.image.url }}">
+              {{ post1.body | truncatechars:1200 | safe }}
+            </article>
+        </div>
+          
+        <div id="four-posts">
+        {% for post in post2_4 %}
+          <article>
+            <h2>{{ post.title }}</h2> 
+            <h3>{{ post.date_published }}</h3>
+            <h4>Written by {{ post.author }}</h4>
+            <img src="{{ post.image.url }}">
+          </article>
+        {% endfor %}
+        </div>
+        <div id="more-posts">
+            <a href="{% url 'post_list' %}"><h2>More Posts</h2></a>  
+        </div>
+      </section>
+      
+
+      <section id="projects">
+
+        <h2>Projects</h2>
+        <div class="project-list">
+             <a href="http://www.winamacpowershow.com" class="winamac project">
+              <h4>winacpowershow.com</h4>
+              <img src="{% static 'hckrieger/winamac.png' %}">
+            </a>
+
+            <a href="http://www.brineyconstructionservices.com" class="briney project">
+              <h4>brineyconstructionservices.com</h4>
+              <img src="{% static 'hckrieger/briney.png' %}">
+            </a>  
+
+        </div>
+
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+      </section>
+      
+      {% include 'footer.html' %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapccom/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

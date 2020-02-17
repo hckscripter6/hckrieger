@@ -1,0 +1,17 @@
+{% extends 'blog/base.html'%}
+
+{% block title %}
+Blog - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+    {% for post in posts %}
+    <article>
+        <h2><a href="{% url 'single_post' post.id %}">{{ post.title }}</a></h2>
+        {{ post.body | safe | truncatechars:800 }}
+    </article>
+    {% endfor %}
+    
+    <a class="btn btn-md btn-primary more_posts" href="{% url 'post_list' %}">More Posts</a>
+  
+{% endblock content %}

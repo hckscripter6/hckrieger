@@ -121,13 +121,22 @@ nav ul li a {
 #jumbotron img {
     display: block;
     margin: 0 auto;
-    height: 200px;
+    height: 225px;
     border-radius: 100%;
 }
 
 #about {
     background-color: yellow;
     grid-area: about;
+}
+
+#about ul {
+    text-align: center; 
+    font-size: 23px; 
+}
+
+#about ul li {
+    margin-bottom: .5em;
 }
 
 #blog {
@@ -154,23 +163,29 @@ nav ul li a {
 article {
     border: 2px solid black;
     padding: .5em 1em;
-    background-color: white;
-    opacity: 0.8;
+    background-color: grey;
 }
+
+
 
 article p {
     font-size: 1.15em;
 }
 
-
+article ul li,
+#about ul li {
+    margin-left: 15px;
+}
 
 article h2 {
     text-align: left;
 }
 
 #four-posts article img {
-    margin: auto auto 0 auto;
+    margin: 1em auto 1em auto;
     display: block;
+    width: auto;
+    height: 200px;
 }
 
 #four-posts h2 {
@@ -252,4 +267,111 @@ footer {
     nav {
         display: none;
     }
+}
+
+
+@media only screen and (max-width: 1200px) {
+    #jumbotron,
+    #about,
+    #blog,
+    #projects,
+    #contact,
+    footer {
+        padding: 1em 5em;
+    }
+}
+
+@media only screen and (max-width: 1040px) {
+  
+    
+    #jumbotron,
+    #about,
+    #blog,
+    #projects,
+    #contact,
+    footer {
+        padding: 1em 1em;
+    }
+    
+    nav ul li {
+        font-size: 18px;
+    }
+    
+    #four-posts article img {
+        height: 175px;
+    }
+
+    #blog article h2 {
+        font-size: 1.5em;
+    }
+    
+    
+    #blog article h3 {
+        font-size: 1.25em;
+    }
+    
+    
+    #blog article h4 {
+        font-size: 1.15em;
+    } 
+
+   nav ul li a {
+        padding: 20px 1em 0 1em;
+        display: block;
+
+    }
+  
+}
+
+@media only screen and (max-width: 900px) {
+    #four-posts article {
+        width: 100%;
+    }
+
+    #four-posts article:nth-child(even) {
+        border-right: 2px solid black;
+        border-left: 2px solid black;
+        border-top: 2px solid black;
+    }
+    
+    #four-posts article:first-of-type {
+        border-bottom: none;
+    }
+    
+    #four-posts article img {
+        height: 200px;
+    }
+    
+  
+    
+    nav ul li {
+        font-size: 16px;
+    }
+    
+ 
+}
+
+@media only screen and (max-width: 768px) {
+    #four-posts article img {
+        height: 175px;
+    }   
+}
+    
+    
+@media only screen and (max-width: 600px) {
+    #about ul li {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #four-posts article img {
+        height: auto;
+        width: 100%;
+    } 
+    
+    #projects .project-list img {
+        width: 100%;
+    }
+    
 }
