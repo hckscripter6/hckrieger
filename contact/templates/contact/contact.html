@@ -15,7 +15,13 @@
 {% block content %}
 <section id="contact">
     <h2>Contact</h2>
-    <h3>asdfjkasdlfjasd;lfkjasd;flkjads;flkjadsf</h3>
+    
+    <form method="post">
+     {% csrf_token %}
+     {{ form | crispy }}  
+     <button class="btn btn-md btn-primary">Submit</button>
+    </form>
+
 </section>
   
 {% endblock content %}
