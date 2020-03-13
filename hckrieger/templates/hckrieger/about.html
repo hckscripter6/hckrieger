@@ -1,0 +1,12 @@
+{% extends 'blog/base.html'%}
+
+{% block title %}
+About - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+<section id="about-page">
+<h2>About Hunter Krieger</h2>
+{{ text.content | safe }}
+</section>
+{% endblock content %}

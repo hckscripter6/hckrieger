@@ -13,3 +13,4 @@ def single_post(request, id):
 def post_list(request):
     posts = Post.objects.filter(published=True).order_by('-id').all
     return render(request, 'blog/posts.html', {'posts': posts})
+

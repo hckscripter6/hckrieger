@@ -1,0 +1,30 @@
+{% extends 'blog/base.html'%}
+
+{% load static %}
+
+{% block title %}
+Websites - {{ block.super }}
+{% endblock title %}
+
+{% block styles %}
+    {{ block.super }}
+    <link href="{% static 'websites/stylesheet.css' %}" type="text/css" rel="stylesheet">
+{% endblock styles %}
+
+{% block content %}
+<section id="websites-page">
+    <h2>Websites Built by Hunter Krieger</h2>
+
+    {% for display in website %}
+        <div class="single_project">
+            <div id="url"><a href="{{ display.url }}">{{ display.url }}</a></div>
+            <img src="{{ display.image.url }}">
+            <div class="description">
+            {{ display.description | safe }}
+            </div>
+        </div>
+        <hr>
+    {% endfor %}
+
+</section>
+{% endblock content %}

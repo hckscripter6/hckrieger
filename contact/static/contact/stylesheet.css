@@ -16,3 +16,16 @@ section#contact form {
 section#contact h2 {
     text-align: left;
 }
+
+@media only screen and (max-width: 1000px) {
+    section#contact {
+        margin: 1em;
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+    section#contact {
+        margin: .75em;
+    }
+}

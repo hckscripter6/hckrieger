@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 class Category(models.Model):
@@ -24,7 +25,7 @@ class Post(models.Model):
 	slug = models.SlugField(max_length=99)
 	date_added = models.DateTimeField(default=timezone.now)
 	author = models.CharField(max_length=60, default='Hunter Krieger')
-	body = models.TextField()
+	body = RichTextField()
 	category = models.ForeignKey(Category, on_delete=models.CASCADE)
 	tags = models.ManyToManyField(Tag)
 	published = models.BooleanField(default=False)	

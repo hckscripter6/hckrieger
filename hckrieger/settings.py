@@ -34,8 +34,11 @@ INSTALLED_APPS = [
     'blog',
     'posts',
     'contact',
+    'about',
+    'websites',
     'storages',
     'crispy_forms',
+    'ckeditor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -136,6 +139,14 @@ AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 AWS_SE_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 AWS_QUERYSTRING_AUTH = False
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': '100%',
+    },
+}
 
 
 EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
