@@ -25,18 +25,19 @@
         <h2>Blog</h2>
         <div id="recent-post">
             <article>
-               <h2>{{ post1.title }}</h2>
+               <h2><a href="{% url 'single_post' post1.id %}">{{ post1.title }}</a></h2>
                <h3>{{ post1.date_published }}</h3>
                <h4>Written by {{ post1.author }}</h4>
               <img src="{{ post1.image.url }}">
-              {{ post1.body | truncatechars:1200 | safe }}
+              {{ post1.body | truncatewords_html:200 | safe }}
+              <a class="btn btn-sm btn-success read_more" href="{% url 'single_post' post1.id %}">Read More</a>
             </article>
         </div>
           
         <div id="four-posts">
         {% for post in post2_4 %}
           <article>
-            <h2>{{ post.title }}</h2> 
+              <h2><a href="{% url 'single_post' post1.id %}">{{ post.title }}</a></h2> 
             <h3>{{ post.date_published }}</h3>
             <h4>Written by {{ post.author }}</h4>
             <img src="{{ post.image.url }}">

@@ -12,12 +12,12 @@ Websites - {{ block.super }}
 {% endblock styles %}
 
 {% block content %}
-<section id="websites-page">
+<section id="websites-page" class="wrapper">
     <h2>Websites Built by Hunter Krieger</h2>
 
     {% for display in website %}
         <div class="single_project">
-            <div id="url"><a href="{{ display.url }}">{{ display.url }}</a></div>
+            <div id="url"><a href="{{ display.url }}">{{ display.organization }}</a></div>
             <img src="{{ display.image.url }}">
             <div class="description">
             {{ display.description | safe }}

@@ -5,7 +5,7 @@
 {% endblock title %}
 
 {% block content %}
-    <article>
+    <article class="wrapper">
         <h2><a href="{% url 'single_post' post.id %}">{{ post.title }}</a></h2>
         {{ post.body | safe }}
     </article>

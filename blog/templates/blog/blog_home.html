@@ -6,10 +6,15 @@ Blog - {{ block.super }}
 
 {% block content %}
     {% for post in posts %}
-    <article>
-        <h2><a href="{% url 'single_post' post.id %}">{{ post.title }}</a></h2>
-        {{ post.body | safe | truncatechars:800 }}
-    </article>
+            <article class="wrapper">
+               <h2><a href="{% url 'single_post' post.id %}">{{ post.title }}</a></h2>
+               <h3>{{ post.date_published }}</h3>
+               <h4>Written by {{ post.author }}</h4>
+              <img src="{{ post.image.url }}">
+              {{ post.body | truncatewords_html:150 | safe }}
+               
+              <a class="btn btn-sm btn-success read_more" href="{% url 'single_post' post.id %}">Read More</a>
+            </article>
     {% endfor %}
     
     <a class="btn btn-md btn-primary more_posts" href="{% url 'post_list' %}">More Posts</a>
