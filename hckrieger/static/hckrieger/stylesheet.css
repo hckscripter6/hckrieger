@@ -64,6 +64,7 @@ header {
 
 header h1 {
     margin-right: auto;
+    margin-top: 2.5px;
 }
 
 nav {
@@ -92,7 +93,7 @@ nav ul li {
 }
 
 nav ul li a {
-    padding: 17px 1em 0 1em;
+    padding: 19px 1em 0 1em;
     display: block;
     
 }
@@ -114,8 +115,8 @@ nav ul li a {
     list-style-type: none;
     font-size: 1.15em;
     text-align: center;
-    border-top: .01px solid black;
-    border-bottom: .01px solid black;
+    border-top: .01px solid grey;
+    border-bottom: .01px solid grey;
     font-weight: bold;
 }
 
@@ -390,6 +391,11 @@ footer {
     #about-page {
         margin: .75em;
     }
+    
+    header h1 {
+        margin-top: 5px;
+        font-size: 2em;
+    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -401,5 +407,7 @@ footer {
     #projects .project-list img {
         width: 100%;
     }
+    
+
     
 }
