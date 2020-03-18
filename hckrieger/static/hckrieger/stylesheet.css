@@ -322,19 +322,7 @@ footer {
         height: 175px;
     }
 
-    #blog article h2 {
-        font-size: 1.5em;
-    }
-    
-    
-    #blog article h3 {
-        font-size: 1.25em;
-    }
-    
-    
-    #blog article h4 {
-        font-size: 1.15em;
-    } 
+
 
    nav ul li a {
         padding: 20px 1em 0 1em;
@@ -377,9 +365,25 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
+    
+    #recent-post article img,
     #four-posts article img {
         height: 175px;
-    }   
+    }  
+    
+    article h2 {
+        font-size: 1.5em;
+    }
+    
+    
+    article h3 {
+        font-size: 1.25em;
+    }
+    
+    
+    article h4 {
+        font-size: 1.15em;
+    } 
 }
     
     
@@ -396,9 +400,16 @@ footer {
         margin-top: 5px;
         font-size: 2em;
     }
+    
+    #recent-post article img,
+    #four-posts article img {
+        float: none;
+        margin-bottom: 10px;
+    } 
 }
 
 @media only screen and (max-width: 400px) {
+    #recent-post article img,
     #four-posts article img {
         height: auto;
         width: 100%;

@@ -37,9 +37,9 @@ header {
 
 #content article img {
     float: left;
-    height: 150px;
+    height: 175px;
     width: auto;
-    margin: 5px 5px 0 0;
+    margin: 10px 10px 0 0;
     border: 2.5px solid black;
 }
 
@@ -141,6 +141,8 @@ a {
     #sidebar aside {
         margin-top: 0;
     }
+    
+
 }
 
 @media only screen and (max-width: 900px) {
@@ -173,9 +175,20 @@ a {
     #sidebar aside {
         margin-top: 0;
     }
+    
+    #content article img {
+        float: none;
+        margin-bottom: 10px;
+    }
 }
 
 @media only screen and (max-width: 500px) {
 
-    
+}
+
+@media only screen and (max-width: 400px) {
+    #content article img {
+        height: auto;
+        width: 100%;
+    }
 }
