@@ -6,7 +6,10 @@
 
 {% block content %}
     <article class="wrapper">
-        <h2><a href="{% url 'single_post' post.id %}">{{ post.title }}</a></h2>
+        <h2>{{ post.title }}</h2>
+        <h3>{{ post.date_published }}</h3>
+        <h4>Written by {{ post.author }}</h4>
+        <img src="{{ post.image.url }}">
         {{ post.body | safe }}
     </article>
 {% endblock content %}

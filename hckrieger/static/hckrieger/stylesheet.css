@@ -30,6 +30,10 @@ h1, h2 {
     font-weight: bold;
 }
 
+p, li {
+    font-size: 1.05em;
+}
+
 #jumbotron,
 #about,
 #blog,
