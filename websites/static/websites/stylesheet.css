@@ -1,6 +1,7 @@
 #websites-page img {
-    height: 250px;
+    width: 350px;
     margin-bottom: .5em;
+    border: 1px solid black;
 }
 
 #websites-page {
@@ -42,13 +43,10 @@
     }
     
     #websites-page img {
-        height: 175px;
+        width: 300px;
     }
     
-    #websites-page div#url {
-        font-size: 17px;
-        
-    }
+ 
 }
 
 @media only screen and (max-width: 400px) {
