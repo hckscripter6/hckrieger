@@ -176,7 +176,9 @@ nav ul li a {
     margin: 12px 12px 0 0;
 }
 
-
+article img {
+    border: 1px solid grey;
+}
 
 article {
     border: 2px solid black;
@@ -258,9 +260,10 @@ article h2 {
 
 #projects .project-list img {
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 15px auto;
     width: 350px;
     height: auto;
+    border: 1px solid grey;
 }
 
 #contact {
