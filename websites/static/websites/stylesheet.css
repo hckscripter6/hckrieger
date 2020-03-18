@@ -48,9 +48,3 @@
     
  
 }
-
-@media only screen and (max-width: 400px) {
-    #websites-page div#url {
-        font-size: 15px;
-    }
-}

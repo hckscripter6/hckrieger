@@ -54,15 +54,12 @@
 
         <h2>Projects</h2>
         <div class="project-list">
-             <a href="http://www.winamacpowershow.com" class="winamac project">
-              <h4>winacpowershow.com</h4>
-              <img src="{% static 'hckrieger/winamac.png' %}">
+            {% for site in sites %}
+             <a href="{{ site.url }}" class="project">
+              <h4>{{ site.organization }}</h4>
+              <img src="{{ site.image.url }}">
             </a>
-
-            <a href="http://www.brineyconstructionservices.com" class="briney project">
-              <h4>brineyconstructionservices.com</h4>
-              <img src="{% static 'hckrieger/briney.png' %}">
-            </a>  
+            {% endfor %}
 
         </div>
 
