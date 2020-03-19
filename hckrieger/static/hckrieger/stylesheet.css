@@ -1,12 +1,10 @@
 * {
-    border: 1px solid black;;
     margin: 0;
     padding: 0;
 }
 
 html,
 body {
-    width: 100%;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -21,7 +19,6 @@ body {
           [contact-start]  "contact"   auto
           [footer-start]   "footer" 80px /
           [content] 100%;
-    border: 1px solid black;
     
 }
 
