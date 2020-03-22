@@ -8,7 +8,8 @@ Blog - {{ block.super }}
     {% for post in posts %}
             <article class="wrapper">
                <h2><a href="{% url 'single_post' post.id %}">{{ post.title }}</a></h2>
-               <h3>{{ post.date_published }}</h3>
+               <h3><strong>{{ post.subtitle }}</strong></h3>
+               <h4>{{ post.date_published }}</h4>
                <h4>Written by {{ post.author }}</h4>
               <img src="{{ post.image.url }}">
               {{ post.body | truncatewords_html:150 | safe }}
