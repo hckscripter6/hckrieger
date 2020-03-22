@@ -1,0 +1,50 @@
+#websites-page img {
+    width: 350px;
+    margin-bottom: .5em;
+    border: 1px solid grey;
+}
+
+#websites-page {
+    margin: 1em .5em 1em .5em;
+    
+}
+
+#websites-page div#url {
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: visible;
+    font-weight: bold;
+    font-size: 22.5px;
+    margin-bottom: .25em;
+}
+
+#websites-page hr:last-of-type {
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    #websites-page {
+        margin: 1em;
+    }
+    
+    #websites-page img {
+        height: 200px;
+    }
+    
+    #websites-page div#url {
+        font-size: 21px;
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+    #websites-page {
+        margin: .75em;
+    }
+    
+    #websites-page img {
+        width: 300px;
+    }
+    
+ 
+}

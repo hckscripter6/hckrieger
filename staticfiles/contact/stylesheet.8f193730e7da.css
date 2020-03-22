@@ -1,0 +1,32 @@
+section#contact_page {
+    display: block;
+    margin: 1em .5em 1em .5em;
+}
+
+section#contact_page form {
+    width: 100%;
+    padding: 0;
+    border-top: 1px solid white;
+}
+
+section#contact_page h2 {
+    text-align: left;
+}
+
+input, textarea {
+    background-color:beige !important;
+    border: 1px outset grey !important;
+}
+
+@media only screen and (max-width: 1000px) {
+    section#contact_page {
+        margin: 1em;
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+    section#contact_page {
+        margin: .75em;
+    }
+}
