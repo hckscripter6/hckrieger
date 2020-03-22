@@ -24,8 +24,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'am6se8$icrafq2%oqvm2&*phvldp!^6yiyc4ui_132=+2s2gpk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-ALLOWED_HOSTS = ['localhost', 'www.hckrieger.com', '127.0.0.1']
+DEBUG = True
+ALLOWED_HOSTS = ['hckrieger.herokuapp.com', 'localhost', 'www.hckrieger.com', '143.95.151.115', '127.0.0.1']
 
 # Application definition
 
