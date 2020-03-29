@@ -1,14 +1,18 @@
 body {
+
+    display: -ms-grid;
     display: grid; 
     grid:
         [header-start]  "header     header    header    header"        70px
         [dropdown-start] "dropdown  dropdown  dropdown  dropdown"  min-content
         [content-start] "lcontainer main      sidebar   rcontainer"    auto
         [footer-start]  "footer     footer    footer    footer"        80px 
-        / [lcontainer] .3fr [main] 3fr [sidebar] 1.15fr [rcontainer] .3fr;
-    background-color: #E0E0E0;
+        / [lcontainer] auto [main] 814.285714286px [sidebar] 325.714285714px [rcontainer] auto;
+    background-color: white;
     font-family: 'Roboto Condensed', sans-serif;
+    background
 }
+
 
 header {
     grid-area: header;
@@ -18,7 +22,12 @@ header {
     border: 2px outset grey;
     border-radius: 5px;
     padding: 1em;
-    background-color: white;
+  background: url("background.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    
 }
 
 #content {
@@ -48,6 +57,7 @@ header {
 
 #sidebar #recent_posts ul li {
     margin-bottom: 10px;
+    
 }
 
 
@@ -94,18 +104,22 @@ article ol li {
 
 @media only screen and (max-width: 1200px) {
     body {
-        grid-template-columns: [lcontainer] 40px [main] 3fr [sidebar] 1.15fr [rcontainer] 40px;
+        grid-template-columns: [lcontainer] auto [main] 3fr [sidebar] 1.15fr [rcontainer] auto;
     }
 }
 
 @media only screen and (max-width: 1100px) {
     body {
-        grid-template-columns: [lcontainer] 20px [main] 3fr [sidebar] 1.15fr [rcontainer] 20px;
+        grid-template-columns: [lcontainer] 10px [main] 3fr [sidebar] 1.2fr [rcontainer] 10px;
     }
 }
 
 @media only screen and (max-width: 1000px) {
-    body {
+
+}
+
+@media only screen and (max-width: 992px) {
+     body {
         grid:
             [header-start]  "header"        70px
             [dropdown-start] "dropdown"  min-content
@@ -145,11 +159,7 @@ article ol li {
     
     #post-list h5 {
         font-size: 1.15em;
-    }
-}
-
-@media only screen and (max-width: 900px) {
-    
+    }   
 
     
 
