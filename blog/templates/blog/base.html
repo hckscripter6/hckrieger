@@ -26,25 +26,28 @@
   <body>
   {% include "navigation.html" %}
   
-  <div class="container"></div>
-    <section id="content">
-        {% block content %}
-      
-        {% endblock content %}
-    </section>
+  <div class="container">
+    <div class="row">
+        <section class="col-md-9" id="content">
+            {% block content %}
 
-  
-    <section id="sidebar">
-        <aside id="recent_posts" class="wrapper">
-            <h3>Recent Posts</h3>
-            <ul>
-                {% for display in sidebar_posts %}
-                <li><a href="{% url 'single_post' display.id %}">{{ display.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </aside>
-    </section>
-  <div class="container"></div>
+            {% endblock content %}
+        </section>
+
+
+        <section class="col-md-3" id="sidebar">
+            <aside id="recent_posts" class="wrapper">
+                <h3>Recent Posts</h3>
+                <ul>
+                    {% for display in sidebar_posts %}
+                    <li><a href="{% url 'single_post' display.id %}">{{ display.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </aside>
+        </section>
+    </div>
+
+  </div>
     
       
   {% include 'footer.html' %}

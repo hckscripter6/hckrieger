@@ -1,18 +1,7 @@
 body {
-    display: grid; 
-    grid:
-        [header-start]  "header     header    header    header"        70px
-        [dropdown-start] "dropdown  dropdown  dropdown  dropdown"  min-content
-        [content-start] "lcontainer main      sidebar   rcontainer"    auto
-        [footer-start]  "footer     footer    footer    footer"        80px 
-        / [lcontainer] .3fr [main] 3fr [sidebar] 1.15fr [rcontainer] .3fr;
-    background-color: #E0E0E0;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-header {
-    grid-area: header;
-}
 
 .wrapper {
     border: 2px outset grey;
@@ -21,17 +10,13 @@ header {
     background-color: white;
 }
 
-#content {
-    grid-area: main;
-}
-
 #content article:first-of-type {
     margin-top: 1em;
 }
 
 #content article {
 
-    margin: 0 .5em 1em .5em;
+    margin: 0 -.375em 1em .5em;
     background-color: white;
 }
 
@@ -40,10 +25,6 @@ header {
     height: 175px;
     width: auto;
     margin: 10px 10px 0 0;
-}
-
-#sidebar {
-    grid-area: sidebar;
 }
 
 #sidebar #recent_posts ul li {
@@ -56,7 +37,7 @@ header {
 section#post-list {
     border: 2px outset grey;
     padding: 1em;
-    margin: 1em .5em 1em .5em;
+    margin: 1em .5em 1em -.375em;
     border-radius: 5px;
     background-color: white;
 }
@@ -71,17 +52,7 @@ section#post-list {
     border: 1px solid black;
 }
 
-.container:first-of-type {
-    grid-area: lcontainer;
-}
 
-.container:last-of-type {
-    grid-area: rcontainer;
-}
-
-footer {
-    grid-area: footer;
-}
 
 aside ul li,
 article ul li,
@@ -92,28 +63,10 @@ article ol li {
 
 
 
-@media only screen and (max-width: 1200px) {
-    body {
-        grid-template-columns: [lcontainer] 40px [main] 3fr [sidebar] 1.15fr [rcontainer] 40px;
-    }
-}
 
-@media only screen and (max-width: 1100px) {
-    body {
-        grid-template-columns: [lcontainer] 20px [main] 3fr [sidebar] 1.15fr [rcontainer] 20px;
-    }
-}
 
 @media only screen and (max-width: 1000px) {
-    body {
-        grid:
-            [header-start]  "header"        70px
-            [dropdown-start] "dropdown"  min-content
-            [content-start] "main"          auto
-            [sidebar-start] "sidebar"       auto
-            [footer-start]  "footer"        80px 
-            / [main] auto;
-    }   
+ 
     
     .container {
         display: none;
