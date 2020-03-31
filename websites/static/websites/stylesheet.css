@@ -4,10 +4,7 @@
     border: 1px solid grey;
 }
 
-#websites-page {
-    margin: 1em .5em 1em .5em;
-    
-}
+
 
 #websites-page div#url {
     word-wrap: break-word;
@@ -23,9 +20,6 @@
 }
 
 @media only screen and (max-width: 1000px) {
-    #websites-page {
-        margin: 1em;
-    }
     
     #websites-page img {
         height: 200px;
@@ -38,9 +32,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-    #websites-page {
-        margin: .75em;
-    }
     
     #websites-page img {
         width: 300px;

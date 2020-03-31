@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    list-style-position: inside;
 }
 
 html,
@@ -11,13 +12,40 @@ body {
 
 
 
-h1, h2 {
+a.title, h2 {
     font-weight: 400;
     font-family: 'Francois One', sans-serif;
 }
 
+a.title {
+    font-size: 2.5em;
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #1a1a1a !important;
+}
+
+nav a.nav-item {
+    font-size: 1.25em !important;
+    margin: 0 10px;
+    font-family: 'Francois One', sans-serif;
+}
+
+nav .navbar-toggler {
+    border-radius: 0 !important;
+    border: 2.5px solid white;
+}
+
+nav .navbar-toggler:hover {
+    background-color: grey;
+}
+
+
+
 p, li {
-    font-size: 1em;
+    font-size: 1.075em;
 }
 
 #jumbotron,
@@ -35,85 +63,6 @@ h2 {
 
 header {
     background-color: #1a1a1a;
-}
-
-#dropdown {
-    background-color: #333333;
-}
-
-header {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    padding: 0 1em;
-    color: white;
-}
-
-#dropdown a {
-    color: white;
-}
-
-header h1 {
-    margin-right: auto;
-    margin-top: 2.5px;
-}
-
-nav {
-    display: inline;
-}
-
-nav,
-nav ul,
-nav ul li,
-nav ul li a {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-
-nav ul {
-    display: flex;
-    flex-flow: row nowrap;
-}
-
-nav ul li {
-    list-style-type: none;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-nav ul li a {
-    padding: 19px 1em 0 1em;
-    display: block;
-    
-}
-
-#dropdown {
-    display: none;
-}
-
-#dropdown ul {
-    display: flex;
-    flex-flow: column nowrap;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-#dropdown ul li {
-    list-style-type: none;
-    font-size: 1.15em;
-    text-align: center;
-    border-top: .01px solid grey;
-    border-bottom: .01px solid grey;
-    font-weight: bold;
-}
-
-#dropdown ul li a {
-    display: block;
-    padding: .155em 0;
-    
 }
 
 
@@ -257,22 +206,11 @@ article h2 {
     display: none;
 }
 
-#about-page {
-    margin: 1em .5em;
-}
+
 
 footer {
     background-color: black;
     color: white;
-}
-
-@media screen and (max-width: 768px) {
-    #dropdown {
-        display: block;
-    }
-    nav {
-        display: none;
-    }
 }
 
 
@@ -287,7 +225,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 991px) {
   
     
     #jumbotron,
@@ -315,13 +253,18 @@ footer {
 
     }
     
-    #about-page {
-        margin: 1em;
+    #about ul li {
+        font-size: 22px;
     }
-  
-}
-
-@media only screen and (max-width: 900px) {
+    
+    nav a.title {
+        font-size: 2.25em;
+    }
+    
+    nav a.nav-item {
+        font-size: 1.1em !important;
+    }
+    
     #four-posts article {
         width: 100%;
     }
@@ -340,13 +283,8 @@ footer {
         height: 200px;
     }
     
+
   
-    
-    nav ul li {
-        font-size: 16px;
-    }
-    
- 
 }
 
 @media only screen and (max-width: 768px) {
@@ -357,7 +295,7 @@ footer {
     }  
     
     article h2 {
-        font-size: 1.5em;
+        font-size: 1.75em;
     }
     
     
@@ -370,18 +308,23 @@ footer {
         font-size: 1.15em;
     } 
     
+    nav a.title {
+        font-size: 2em;
+    }
+    
+    p, li {
+        font-size: 1.05em;
+    }
+    
     #about ul li {
         font-size: 20px;
     }
+    
 }
     
     
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 576px) {
 
-    
-    #about-page {
-        margin: .75em;
-    }
     
     header h1 {
         margin-top: 5px;
@@ -393,9 +336,11 @@ footer {
         float: none;
         margin-bottom: 10px;
     } 
-}
-
-@media only screen and (max-width: 400px) {
+    
+    nav a.nav-item {
+        font-size: 1em !important;
+    }
+    
     #recent-post article img,
     #four-posts article img {
         height: auto;
@@ -406,6 +351,7 @@ footer {
         width: 100%;
     }
     
-
-    
+    p, li {
+        font-size: 1em;
+    }
 }

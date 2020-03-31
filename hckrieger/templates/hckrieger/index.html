@@ -10,8 +10,9 @@
         <img style="border: 2px solid black;" src="{% static 'hckrieger/headshot2.jpg' %}">
         <h2>Hunter Krieger</h2>
         <h3>Blogger, Reader, Gamer, Musician, Programmer</h3>
-     </div>
-      <section id="about">
+    </div>
+
+    <div id="about">
         <h2>Hunter Krieger has....</h2>
         <ul>
             <li>...utilized web technologies to build professional websites</li>
@@ -19,9 +20,9 @@
             <li>...managed to survive in his mortal form on the planet earth for 26 years and counting</li>
         </ul>
         <h4 style="text-align: center;"><a href="{% url 'about' %}">More About Hunter</a></h4>
-      </section>
+    </div>
 
-      <section id="blog">
+    <div id="blog">
         <h2>Blog</h2>
         <div id="recent-post">
             <article>
@@ -34,7 +35,7 @@
               <a class="btn btn-sm btn-success read_more" href="{% url 'single_post' post1.id %}">Read More</a>
             </article>
         </div>
-          
+
         <div id="four-posts">
         {% for post in post2_4 %}
           <article>
@@ -48,10 +49,10 @@
         <div id="more-posts">
             <a href="{% url 'post_list' %}"><h2>More Posts</h2></a>  
         </div>
-      </section>
-      
+    </div>
 
-      <section id="projects">
+
+    <div id="projects">
 
         <h2>Projects</h2>
         <div class="project-list">
@@ -64,18 +65,15 @@
 
         </div>
 
-      </section>
+    </div>
 
-      <section id="contact">
-        <h2>Contact</h2>
-      </section>
+    <!--<div id="contact">
+    <h2>Contact</h2>
+    </div>-->
       
-      {% include 'footer.html' %}
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapccom/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>

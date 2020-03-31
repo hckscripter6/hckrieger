@@ -2,13 +2,20 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+.container {
+    border-left: 1px solid black !important;
+    border-right: 1px solid black !important;
+}
 
 .wrapper {
     border: 2px outset grey;
     border-radius: 5px;
-    padding: 1em;
+    padding: .5em .5em .5em 1em;
+    margin: 1em .6em 1em 0em;
     background-color: white;
 }
+
+
 
 #content article:first-of-type {
     margin-top: 1em;
@@ -16,9 +23,13 @@ body {
 
 #content article {
 
-    margin: 0 -.375em 1em .5em;
     background-color: white;
 }
+
+#content article h3 {
+    font-size: 1.45em;
+}
+
 
 #content article img {
     float: left;
@@ -33,28 +44,20 @@ body {
 
 
 
-#sidebar aside,
-section#post-list {
+#sidebar aside {
     border: 2px outset grey;
-    padding: 1em;
-    margin: 1em .5em 1em -.375em;
+    margin: 1em 0 1em -1.5em;
+    padding: .5em 1em 0 1em;
     border-radius: 5px;
     background-color: white;
 }
 
-.more_posts {
-    margin-left: .5em;
-    margin-bottom: 1em;
-    border: 1px solid black;
+
+
+aside ul li {
+    margin-left: 5px;
 }
 
-.more_posts {
-    border: 1px solid black;
-}
-
-
-
-aside ul li,
 article ul li,
 article ol li {
     margin-left: 20px;
@@ -62,34 +65,33 @@ article ol li {
 
 
 
+@media only screen and (max-width: 1100px) {
+
+    
+    aside {
+        padding-bottom: 0;
+    }
+    
+    aside {
+        padding: .5em 1em 0 1em !important;
+    }
+}
 
 
-
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 991px) {
  
-    
-    .container {
-        display: none;
+    .wrapper {
+        margin-right: 0;
+        margin-bottom: 0;
     }
-    
+   
+ 
     .more_posts {
-        margin: 0 .75em;
+        margin-top: 1em;
     }
     
-    #sidebar aside,
-    .more_posts,
-    #content article {
-        margin: 1em;
-    }
-    
-    section#post-list {
-        margin: 1em;
-    }
-    
-    footer,
-    .more_posts,
-    #sidebar aside {
-        margin-top: 0;
+    aside {
+        margin-left: 0 !important;
     }
     
     #post-list h4 {
@@ -101,36 +103,23 @@ article ol li {
     }
 }
 
-@media only screen and (max-width: 900px) {
-    
-
-    
-
-}
 
 @media only screen and (max-width: 768px) {
- 
+    #content article h3 {
+        font-size: 1.25em;
+    }
+    
+    #post-list h4 {
+        font-size: 1.25em;
+    }
 }
     
     
-@media only screen and (max-width: 600px) {
-    #sidebar aside,
-    .more_posts,
-    #content article {
-        margin: .75em;
-    }
-    
-    
-    
-    .more_posts {
-        margin-bottom: 0 .75em;
-    }
-    
+@media only screen and (max-width: 576px) {
    
-    .more_posts,
-    #sidebar aside {
-        margin-top: 0;
-    }
+  
+    
+    
     
     #content article img {
         float: none;
@@ -138,9 +127,6 @@ article ol li {
     }
 }
 
-@media only screen and (max-width: 500px) {
-
-}
 
 @media only screen and (max-width: 400px) {
     #content article img {
