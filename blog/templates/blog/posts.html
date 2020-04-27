@@ -11,7 +11,7 @@ Posts - {{ block.super }}
     <hr>
     <div class="post-set" style="margin-bottom: 1em;">
        <h4>{{ display.date_published }}</h4>
-       <h5 style="margin-left: 2em;"><a href="{% url 'single_post' display.id %}">{{ display.title }}</a></h5>   
+       <h5 style="margin-left: 2em;"><a href="{% url 'single_post' display.slug %}">{{ display.title }}</a></h5>   
     </div>
 
     {% endfor %}

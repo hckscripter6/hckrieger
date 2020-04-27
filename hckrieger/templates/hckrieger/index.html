@@ -26,7 +26,7 @@
         <h2>Blog</h2>
         <div id="recent-post">
             <article>
-               <h2><a href="{% url 'single_post' post1.id %}">{{ post1.title }}</a></h2>
+               <h2><a href="{% url 'single_post' post1.slug %}">{{ post1.title }}</a></h2>
                <h3><strong>{{ post1.subtitle }}</strong></h3>
                <h4>{{ post1.date_published }}</h4>
                <h4>Written by {{ post1.author }}</h4>
@@ -39,7 +39,7 @@
         <div id="four-posts">
         {% for post in post2_4 %}
           <article>
-              <h2><a href="{% url 'single_post' post.id %}">{{ post.title }}</a></h2> 
+              <h2><a href="{% url 'single_post' post.slug %}">{{ post.title }}</a></h2> 
             <h3>{{ post.date_published }}</h3>
             <h4>Written by {{ post.author }}</h4>
             <img src="{{ post.image.url }}">
