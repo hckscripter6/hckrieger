@@ -14,7 +14,7 @@ Blog - {{ block.super }}
               <img src="{{ post.image.url }}">
               {{ post.body | truncatewords_html:150 | safe }}
                
-              <a class="btn btn-sm btn-success read_more" href="{% url 'single_post' post.id %}">Read More</a>
+              <a class="btn btn-sm btn-success read_more" href="{% url 'single_post' post.slug %}">Read More</a>
             </article>
     {% endfor %}
     

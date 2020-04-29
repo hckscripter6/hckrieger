@@ -32,7 +32,7 @@
                <h4>Written by {{ post1.author }}</h4>
               <img src="{{ post1.image.url }}">
               {{ post1.body | truncatewords_html:200 | safe }}
-              <a class="btn btn-sm btn-success read_more" href="{% url 'single_post' post1.id %}">Read More</a>
+              <a class="btn btn-sm btn-success read_more" href="{% url 'single_post' post1.slug %}">Read More</a>
             </article>
         </div>
 
