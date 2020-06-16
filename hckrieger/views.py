@@ -4,8 +4,8 @@ from about.models import About
 from websites.models import Website
 
 def homepage(request):
-    post1 = Post.objects.filter(published=True).last()
-    post2_4 = Post.objects.order_by('-id').filter(published=True).all()[1:5]
+    post1 = Post.objects.filter(published=True).order_by('-date_published').last()
+    post2_4 = Post.objects.order_by('-date_published').filter(published=True).all()[1:5]
     sites = Website.objects.order_by('-id').all()
     return render(request, 'hckrieger/index.html', {'post1': post1, 'post2_4': post2_4, 'sites': sites})
 
