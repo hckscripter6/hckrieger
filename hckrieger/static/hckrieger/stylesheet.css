@@ -110,6 +110,7 @@ header {
 #recent-post article img {
     float: left;
     margin: 12px 12px 0 0;
+    height: 200px;
 }
 
 article img {
